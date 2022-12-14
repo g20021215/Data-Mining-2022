@@ -85,7 +85,7 @@ print(train_target)
 # GridSearchCV类可以用来对分类器的指定参数值进行详尽搜索，这里搜索最佳的决策树的深度
 
 params = {'max_depth': range(1, 20)}
-best_clf = GridSearchCV(DecisionTreeClassifier(criterion='entropy', random_state=20), param_grid=params)  # ,cv=10
+best_clf = GridSearchCV(DecisionTreeClassifier(criterion='entropy', random_state=20), param_grid=params,cv=10)  # 
 best_clf = best_clf.fit(train_dataset, train_target)
 print(best_clf.best_params_)
 
