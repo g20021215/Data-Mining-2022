@@ -9,7 +9,7 @@ df = pd.read_csv('adult.csv', header=None,
 df.head()
 df.info()  ###
 
-df.apply(lambda x: np.sum(x == ""))
+df.apply(lambda x: np.sum(x == " ?"))
 
 df.replace(" ?", pd.NaT, inplace=True)
 df.replace(" >50K", 1, inplace=True)  # substitude >50K by 1
